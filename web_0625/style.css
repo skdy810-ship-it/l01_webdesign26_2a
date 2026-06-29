@@ -1,0 +1,428 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+background:#fff;
+}
+
+:root{
+--green:#38D35E;
+--gray:#efefef;
+--black:#000;
+}
+
+/* ================= */
+/* PROGRESS BAR */
+/* ================= */
+
+.progress-bar{
+position:fixed;
+top:0;
+left:0;
+width:0;
+height:4px;
+background:var(--green);
+z-index:99999;
+}
+
+/* ================= */
+/* NAV */
+/* ================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+}
+
+nav{
+height:60px;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:15px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#38D35E;
+
+}
+
+/* ================= */
+/* HERO */
+/* ================= */
+
+.hero{
+height:100vh;
+background:#000;
+padding:120px 70px;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h1{
+font-size:clamp(42px,5vw,72px);
+line-height:1.15;
+color:white;
+font-weight:700;
+}
+
+.hero h1 span{
+color:var(--green);
+}
+
+.hero-subtitle{
+margin-top:20px;
+font-size:clamp(22px,2vw,32px);
+color:var(--green);
+}
+
+.hero-keywords{
+position:absolute;
+bottom:60px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:80px;
+}
+
+.hero-keywords span{
+font-size:12px;
+color:white;
+}
+
+/* ================= */
+/* ABOUT */
+/* ================= */
+
+.about{
+height:100vh;
+padding:120px 70px;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:var(--gray);
+padding:120px 40px;
+text-align:center;
+}
+
+.about h2{
+color:var(--green);
+font-size:30px;
+margin-bottom:30px;
+}
+
+.about-text{
+font-size:clamp(26px,3vw,48px);
+line-height:1.5;
+font-weight:700;
+margin-bottom:70px;
+}
+
+.skill-wrap{
+display:grid;
+grid-template-columns:repeat(2,180px);
+gap:25px 50px;
+justify-content:center;
+}
+
+.skill{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:14px;
+}
+
+.skill-box{
+width:24px;
+height:24px;
+background:#d8d8d8;
+}
+
+/* ================= */
+/* WORKS */
+/* ================= */
+
+.works{
+    position:relative;
+    width:100%;
+    height:au;
+    min-height:1400px;
+    background:#000;
+    overflow:hidden;
+}
+
+.works-title{
+padding-top:40px;
+padding-left:40px;
+}
+
+.works-title h2{
+font-size:clamp(70px,8vw,130px);
+line-height:.9;
+font-weight:800;
+color:var(--green);
+}
+
+.works-title h2:last-child{
+text-align:right;
+padding-right:40px;
+}
+
+/* 카드 공통 */
+
+.project-card{
+position:absolute;
+cursor:pointer;
+transition:
+transform .4s ease,
+box-shadow .4s ease;
+}
+
+.project-card:hover{
+box-shadow:
+0 20px 50px rgba(56,211,94,.25);
+}
+
+.project-image{
+
+width:100%;
+aspect-ratio:1/1;
+overflow:hidden;
+
+}
+
+.project-image img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+display:block;
+
+}
+
+.project-card:hover img{
+transform:scale(1.12);
+}
+
+.project-card h3{
+margin-top:12px;
+font-size:22px;
+color:white;
+}
+
+.project-card p{
+font-size:13px;
+color:white;
+}
+
+/* 카드 위치 */
+
+.card-left{
+    width:520px;
+    left:100px;
+    top:200px;
+}
+
+.card-right{
+    width:500px;
+    right:100px;
+    top:500px;
+}
+
+.card-bottom{
+    width:450px;
+    left:150px;
+    bottom:50px;
+}
+
+/* ================= */
+/* PROCESS */
+/* ================= */
+
+.process{
+height:100vh;
+padding:120px 70px;
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:#efefef;
+padding:80px 20px 140px;
+}
+
+.process h2{
+font-size:clamp(60px,8vw,120px);
+color:var(--green);
+margin-bottom:80px;
+}
+
+.process-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.process-item{
+    text-align:center;
+    opacity:1;
+    transform:none;
+    transition:.7s;
+}
+
+.circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:var(--green);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:30px;
+font-weight:bold;
+color:white;
+
+margin:auto;
+margin-bottom:10px;
+}
+
+
+
+/* ================= */
+/* CONTACT */
+/* ================= */
+
+.contact{
+background:var(--green);
+padding:50px;
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+}
+
+.contact h2{
+font-size:32px;
+line-height:1.4;
+color:white;
+margin-bottom:40px;
+}
+
+.contact p{
+color:white;
+}
+
+.download-btn{
+background:white;
+color:var(--green);
+text-decoration:none;
+padding:18px 36px;
+transition:.3s;
+}
+
+.download-btn:hover{
+background:black;
+color:var(--green);
+}
+
+/* ================= */
+/* SCROLL ANIMATION */
+/* ================= */
+
+.about,
+.works,
+.process,
+.contact{
+
+opacity:1;
+transform:none;
+
+}
+
+
+.about.show,
+.works.show,
+.process.show,
+.archive.show,
+.contact.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+/* ================= */
+/* MOBILE */
+/* ================= */
+
+@media(max-width:768px){
+
+.hero{
+padding:100px 30px;
+}
+
+.hero-keywords{
+gap:30px;
+}
+
+.skill-wrap{
+grid-template-columns:1fr;
+}
+
+.works{
+height:auto;
+padding-bottom:100px;
+}
+
+.project-card{
+position:static;
+width:90%;
+margin:50px auto;
+}
+
+.process-wrap{
+flex-direction:column;
+}
+
+.arrow{
+display:none;
+}
+
+.contact{
+flex-direction:column;
+align-items:flex-start;
+gap:30px;
+}
+
+}
